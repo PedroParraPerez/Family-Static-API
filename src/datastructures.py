@@ -50,7 +50,7 @@ class FamilyStructure:
     def delete_member(self, id):
         # fill this method and update the return
         for position, member in enumerate(self._members): # se usa la funcion enumerate para asignarle un numero empezando por "0"
-            print("aqui esta meeeeeeeeeeeeember",  position, member)
+            print("aqui esta member",  position, member)
             if member["id"] == int(id): # si en _member hay un Id de algun objeto que es igual al id que se le pasa por parametro en app.py @app.routes ocurre lo siguiente
                 outcast_member = self._members.pop(position) #position es un integer que coincide con las posiciones de la lista de objetos
                 return outcast_member

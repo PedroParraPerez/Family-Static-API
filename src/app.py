@@ -36,7 +36,7 @@ def handle_hello():
 @app.route('/member', methods=['POST'])
 def add_jackson_member():
 
-    print("aqui esta request",request.json)
+   
     new_member = request.json
 
     if new_member:
@@ -52,7 +52,7 @@ def get_member_by_id(id):
     if member:
         return jsonify(member), 200
 
-    return jsonify({'error': 'Pablito not found'}), 404
+    return jsonify({'error': 'Member not found'}), 404
 
 @app.route('/member/<int:id>', methods=['DELETE'])
 def delete_member_by_id(id):
